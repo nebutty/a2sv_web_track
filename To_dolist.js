@@ -1,6 +1,6 @@
-// Run this when the page loads
+
 window.onload = function () {
-    showEmptyMessageIfNeeded(); // Show the message on load
+    showEmptyMessageIfNeeded(); 
 };
 
 function todo() {
@@ -10,7 +10,7 @@ function todo() {
 
     if (taskText === "") return;
 
-    // Remove "No tasks yet" message if present
+    
     const emptyMsg = document.getElementById("empty-message");
     if (emptyMsg) emptyMsg.remove();
 
@@ -83,7 +83,7 @@ function showEmptyMessageIfNeeded() {
     const taskList = document.getElementById("tasklist");
     const existingMsg = document.getElementById("empty-message");
 
-    // If task list is empty and message not already there
+    
     if (taskList.children.length === 0 && !existingMsg) {
         const msg = document.createElement("p");
         msg.id = "empty-message";
@@ -94,7 +94,7 @@ function showEmptyMessageIfNeeded() {
         document.querySelector(".whole").appendChild(msg);
     }
 
-    // If task exists and message is there, remove it
+    
     if (taskList.children.length > 0 && existingMsg) {
         existingMsg.remove();
     }
